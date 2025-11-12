@@ -11,7 +11,7 @@ function calculadora() {
     let res;
 
     if (num1 == "" || num2 == "" || operador == "") {
-        document.getElementById("res").innerHTML = `<p>Introduce datos válidos</p>`;
+        document.getElementById("res").innerHTML = `<p class="error">Introduce datos válidos</p>`;
         return;
     }
 
@@ -19,10 +19,10 @@ function calculadora() {
     const b = Number(num2);
 
     if (isNaN(a) || isNaN(b)) {
-            document.getElementById("res").innerHTML = `<p>Introduce datos válidos</p>`;
+            document.getElementById("res").innerHTML = `<p class="error">Introduce datos válidos</p>`;
             return;
     } else if (!["+", "-", "/", "*"].includes(operador)) {
-            document.getElementById("res").innerHTML = `<p>Introduce alguno de estos operadores: +,-,*,/</p>`;
+            document.getElementById("res").innerHTML = `<p class="error">Introduce alguno de estos operadores: +, -, *, /</p>`;
             return;
     } else {
         switch (operador) {
